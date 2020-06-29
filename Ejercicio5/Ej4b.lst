@@ -1,0 +1,13 @@
+(ARCTools Version 2.1.2)
+ HexLoc     DecLoc    MachWord   Label        Instruction                Comment
+                                              .org 2048                  
+00000800  0000002048            prog3:                                   
+00000804  0000002052  c4038000                ld %r14, %r2               !Acceso a memoria RAM
+00000808  0000002056  82002019                add %r0, 25, %r1           !Operacion de registro
+0000080c  0000002060  84008001                add %r2, %r1, %r2          !Operacion de registro
+00000810  0000002064  c4238000                st %r2, %r14               !Acceso a memoria RAM
+00000814  0000002068  81c3e004                jmpl %r15, 4, %r0          !Operacion de registro
+                                                                         !2Ram + 3Reg	
+
+--- Symbol Table ---
+prog3: 2048
