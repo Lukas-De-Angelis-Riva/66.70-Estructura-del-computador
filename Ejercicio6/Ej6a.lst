@@ -1,0 +1,55 @@
+(ARCTools Version 2.1.2)
+ HexLoc     DecLoc    MachWord   Label        Instruction                Comment
+                                              .org 2048                  
+00000800  0000002048            prog:                                    
+00000804  0000002052  dc002840                ld [2112], %r14            
+00000808  0000002056  c2002834                ld [2100], %r1             
+0000080c  0000002060  c4002838                ld [2104], %r2             
+00000810  0000002064  9c83bffc                addcc %r14, -4, %r14       
+00000814  0000002068  c2238000                st %r1, %r14               
+00000818  0000002072  9c83bffc                addcc %r14, -4, %r14       
+0000081c  0000002076  c4238000                st %r2, %r14               
+                                                                         
+                                                                         
+00000820  0000002080  bc83c000                addcc %r15, %r0, %r30      
+00000824  0000002084  40000008                call 8                     
+                                                                         
+00000828  0000002088  dc20283c                st %r14, [2108]            
+                                                                         
+0000082c  0000002092  9c83a00c                addcc %r14, 12, %r14       
+                                                                         
+00000830  0000002096  81c7a004                jmpl %r30, 4, %r0          
+                                                                         
+00000834  0000002100  00000004  x:                                       
+00000838  0000002104  00000009  y:                                       
+0000083c  0000002108  00000000  z:                                       
+00000840  0000002112  00001770  stackPointer:                             !Es para asignar un valor a r14 y que tenga sentido pasar cosas por el stack.
+                                                                         
+                                                                         
+                                                                         
+                                                                         !sbradd recibe los parametros a sumar por la pila, es decir:
+                                                                         !Sumando1:	%r14.
+                                                                         !Sumando2:	%r14 + 4
+                                                                         !Suma:		%r14 - 4
+                                                                         
+                                                                         !Se utilizan los registros r1 y r2, estos seran sobreescritos.
+                                                                         
+00000844  0000002116            sbradd:                                  
+                                                                         
+00000848  0000002120  c2038000                ld %r14, %r1               
+0000084c  0000002124  c403a004                ld %r14, [4], %r2          
+                                                                         
+00000850  0000002128  84804002                addcc %r1, %r2, %r2        
+00000854  0000002132  9c83bffc                addcc %r14, -4, %r14       
+                                                                         
+00000858  0000002136  c2238000                st %r1, %r14               
+0000085c  0000002140  81c3e004                jmpl %r15, 4, %r0          
+                                                                         
+
+--- Symbol Table ---
+x: 2100
+stackPointer: 2112
+prog: 2048
+sbradd: 2116
+z: 2108
+y: 2104

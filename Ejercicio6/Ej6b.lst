@@ -1,0 +1,48 @@
+(ARCTools Version 2.1.2)
+ HexLoc     DecLoc    MachWord   Label        Instruction                Comment
+                                              .org 2048                  
+00000800  0000002048            prog:                                    
+00000804  0000002052  dc002834                ld [2100], %r14            
+                                                                         
+00000808  0000002056  c2002828                ld [2088], %r1             !Tengo un numero en r1.
+0000080c  0000002060  c400282c                ld [2092], %r2             !Tengo otro numero en r2.
+                                                                         
+00000810  0000002064  c2202850                st %r1, [2128]             !Guardo el sumando1
+00000814  0000002068  c4202854                st %r2, [2132]             !Guardo el sumando2
+                                                                         
+00000818  0000002072  bc83c000                addcc %r15, %r0, %r30      !No pierdo la referencia a quien me llamó
+0000081c  0000002076  40000007                call 7                     !Llamo a la función de sumar dos números.
+                                                                         
+00000820  0000002080  c6002858                ld [2136], %r3             !Me guardo en r3 la suma.
+00000824  0000002084  81c7a004                jmpl %r30, 4, %r0          
+                                                                         
+                                                                         
+00000828  0000002088  00000004  n1:                                      
+0000082c  0000002092  00000009  n2:                                      
+00000830  0000002096  00000000  n3:                                      
+00000834  0000002100  00001770  stackPointer:                             !Es para asignar un valor a r14 y que tenga sentido pasar cosas por el stack.
+                                                                         
+                                                                         
+                                                                         
+                                                                         !Suma los dos numeros que están en las posiciones vectorSuma, vectorSuma+4 y guarda la suma en vectorSuma+8.
+                                                                         
+                                                                         !Se utilizan los registros r1 y r2, estos seran sobreescritos.
+                                                                         
+00000838  0000002104            sbradd:                                  
+0000083c  0000002108  c2002850                ld [2128], %r1             !Agarro el sumando 1
+00000840  0000002112  c4002854                ld [2132], %r2             !Agarro el sumando 2
+00000844  0000002116  84004002                add %r1, %r2, %r2          !Sumo y guardo en el r2
+00000848  0000002120  c4202858                st %r2, [2136]             !Guardo la suma en vectorSuma+8
+0000084c  0000002124  81c3e004                jmpl %r15, 4, %r0          !vuelvo
+                                                                         
+00000850  0000002128            vectorSuma:   .dwb 3                     
+                                                                         
+
+--- Symbol Table ---
+vectorSuma: 2128
+stackPointer: 2100
+n3: 2096
+n2: 2092
+n1: 2088
+prog: 2048
+sbradd: 2104
