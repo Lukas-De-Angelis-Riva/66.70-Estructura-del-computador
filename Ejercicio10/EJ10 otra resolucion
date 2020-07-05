@@ -1,0 +1,40 @@
+!Este programa recibe dos numeros con signo por stack determina si suma es correcta
+! r1 = primer numero
+! r2 = segundo numero
+! r3 = estado de la operacion
+
+.begin
+.org 2048
+
+main: 
+	add %r0,%r0,%r3	!Inicializamos r3 = 0
+
+	add %r14,-4,%r14	!Decrementamos por las dudas de no pisar lo anterior
+	ld [x],%r1
+	st %r1,%r14
+	add %r14,-4,%r14	!Guardamos los numeros x e y en el stack
+	ld [y],%r2
+	st %r2,%r14
+
+	ld %r14, %r2		!Cargamos el segundo numero del stack
+	add %r14 + 4,%r14	!Decrementamos el stack (para arriba)
+	ld %r14, %r1		!Cargamos el primer numero del stack
+	add %r14 + 4,%r14	!Decrementamos el stack (para arriba)
+
+	addcc %r1,%r2,%r0	!Sumamos ambos numeros y vemos los flags
+	bvs numeroInvalido
+	ba finalizar
+
+numeroInvalido: 
+	add %r0,-1,%r3	!Seteamos r3 a -1 indicando error
+	ba finalizar
+
+finalizar: 
+	st %r3,[z]
+	jmpl %r15 + 4, %r0
+
+x: -1999999998
+y: -1999999998
+z: 0
+
+.end 
