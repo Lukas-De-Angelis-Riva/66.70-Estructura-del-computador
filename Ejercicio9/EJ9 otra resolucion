@@ -1,0 +1,36 @@
+!Este programa recibe un numero por stack en A2 y devuelve su valor absoluto 
+! r1 = numero en A2
+! r2 = valor absoluto del numero
+
+.begin
+.org 2048
+
+main: 
+	add %r15,%r0,%r20	!Back Up de r15 en r20
+	ld [numero],%r1
+	add %r14,-4,%r14	!Movemos el stack por las dudas de que haya algo antes
+	st %r1,%r14		!Guardamos el numero en el stack
+	call obtener_absoluto !LLamado a subrutina (se modifica r15)
+	jmpl %r20 + 4,%r0 	!Volvemos a donde nos llamaron
+
+obtener_absoluto:	
+	ld %r14,%r1		!Obtenemos el numero del stack
+	add %r14,4,%r14	!Disminuimos el stack
+	add %r1,0,%r2		!Guardamos al comienzo por si no es negativo
+	addcc %r1,%r0,%r0   !Comprobamos si el numero es negativo
+	bneg esNegativo     !Comprobamos si el numero es negativo
+	ba finalizar
+
+!Si el numero es negativo complementamos
+esNegativo: 
+	sub %r0,%r1,%r2	!Complementamos el numero
+	ba finalizar
+
+!Al finalizar guardamos el numero complementado en la memoria
+finalizar: st %r2,[complemento]
+	jmpl %r15 + 4,%r0
+
+numero: -2
+complemento: 0
+
+.end 
