@@ -1,0 +1,35 @@
+!Escribir una rutina que lee del stack un valor de 32 bits, cuenta la cantidad de 1 s 
+!comprendidos en su representación binaria y devuelve ese valor por stack.
+
+! r1 = numero    			Colocarlo a donde apunta el stack para obtenerlo
+! r2 = auxiliar
+! r3 = contadorUnos
+
+.begin
+.org2048
+	
+	ld %r14,%r1			!Cargamos el numero desde el stack (r1 = numero)
+	add %r1,%r0,%r2		        !Inicializamos r2 = r1 (aux = numero)
+	add %r3,%r0,%r3		        !Inicializamos r3 = 0 (contadorUnos = 0)	
+
+while: 
+	addcc %r2,%r0,%r0
+	be finalizar			!Vemos si aux es cero (aux == 0) y finalizamos
+
+	addcc %r2,%r0,%r0		!Vemos el bit mas significativo
+	bneg aumentarContador	        !Si el ultimo bit es 1 aumentamos el contador
+
+	sll %r2,1,%r2			!Corremos el aux uno a la izquierda
+	ba while
+
+aumentarContador:
+	add %r3,1,%r3			!Aumentamos el contador r3++ (Contador++)	
+	sll %r2,1,%r2			!Corremos el aux uno a la izquierda
+	ba while
+
+finalizar: 
+	add %r14,-4,%r14		!Aumentamos el stack para guardar
+	st %r3,%r14			!Guardamos el contador en el stack
+	jmpl %r15 + 4,%r0		!Volvemos de donde nos llamaron
+	
+.end
