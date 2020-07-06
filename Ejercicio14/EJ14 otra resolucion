@@ -1,0 +1,40 @@
+!Este programa recibe un numero entero y devuelve el cuadrado del mismo, si no se puede representar devolver -1
+! r1 = numero
+! r2 = cuadrado del numero 
+! r3 = indice del loop ("i")
+
+.begin
+.org 2048
+
+main: 
+	ld [numero],%r1		!Cargamos el numero en r1
+	add %r0,%r0,%r2		!Inicializamos r2 = 0      (cuadrado = 0)
+	
+	addcc %r1,%r0,%r0		!Vemos si el numero es negativo
+	bneg calcular_complemento	!Si es negativo calculamos el complemento del numero
+	add %r1,%r0,%r3		!Inicializamos r3 = numero (i = numero)
+for:
+	addcc %r3,%r0,%r0		! r3 + 0 = r3 y actualizamos los flags
+	be finalizar			!Si r3 = 0 (i = 0) terminamos el for
+	addcc %r2,%r1,%r2		!r2 = r2 + r1 (cuadrado = cuadrado + numero)
+	bcs numeroInvalido		!Si el numero no puede ser representado
+	add %r3,-1,%r3		!Decrementamos el indice del ciclo for (i--)
+	ba for
+
+calcular_complemento:
+	sub %r0,%r1,%r1		!Calculamos el complemento del numero
+	add %r1,%r0,%r3		!Inicializamos r3 = numero (i = numero)
+	ba for
+
+numeroInvalido: 
+	add %r0,-1,%r2		!Seteamos r2 a -1 indicando error
+	ba finalizar
+
+finalizar: 
+	st %r2,[cuadradoNumero]
+	jmpl %r15 + 4, %r0
+
+numero: -1
+cuadradoNumero: 0
+
+.end
