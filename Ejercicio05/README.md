@@ -1,6 +1,6 @@
 # Ejercicio 5
 
-![Enunciado](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Ejercicio5/Enunciado.JPG)
+![Enunciado](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Ejercicio05/Enunciado.JPG)
 
 
 ## Programa 1:
