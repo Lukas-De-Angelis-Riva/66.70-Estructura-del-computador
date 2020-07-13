@@ -47,48 +47,23 @@ obtener_maximo:
 	ld %r1+%r2,%r5			!leo del vector, empiezo por el final
 	subcc %r2,4,%r2			!me muevo en el vector
 	be termine_vector		!si solo habia un numero termine
-	addcc %r5,%r0,%r0		!veo los flags del numero que empieza siendo maximo
-	bpos max_es_positivo		!me muevo dependiendo del caso en que este
-	bneg max_es_negativo
-	be max_es_positivo
+	ba maximo			
 
 !-------
 
-max_es_negativo:
+maximo:
 	ld %r1+%r2,%r4			!leo del vector
-	addcc %r4,%r0,%r0		!veo el signo de lo que lei
-	bpos leido_es_mayor		!y voy dependiendo del caso
-	bneg lei_neg
-	be leido_es_mayor
-vuelta_neg:
+	subcc %r5,%r4,%r0		!veo el signo, si es negativo, es mayor, si es positivo es menor
+	bneg es_mayor
+vuelta:
 	subcc %r2,4,%r2			!me muevo en el vector
 	be termine_vector
-	ba max_es_negativo
-
-lei_neg:
-	subcc %r4,%r5,%r0		!veo cual es mayor de los negativos (Ej MAX es -2)
-	bpos leido_neg_mayor		!Si leo -1 hace -1-(-2)=1 -> -1 es guardado
-	ba vuelta_neg			!Si leo -3 hace -3-(-2)=-1 -> queda -2 como maximo
-
-leido_neg_mayor:
-	add %r4,%r0,%r5			!guardo el nuevo maximo
-	ba vuelta_neg
-
-!-------
-
-max_es_positivo:
-	ld %r1+%r2,%r4			!leo el numero del vector
-	subcc %r5,%r4,%r0		!veo cual es mayor
-	bneg leido_es_mayor		
-vuelvo1:
-	subcc %r2,4,%r2			!me muevo en el vector
-	be termine_vector
-	ba max_es_positivo
+	ba maximo
 
 
-leido_es_mayor:
+es_mayor:
 	add %r4,%r0,%r5			!remplazo al maximo
-	ba vuelvo1
+	ba vuelta
 
 !-------
 
@@ -119,48 +94,24 @@ obtener_minimo:
 	ld %r1+%r3,%r5			!leo del vector, empiezo por el final
 	subcc %r3,4,%r3			!me muevo en el vector
 	be termine_vector		!si solo habia un numero termine
-	addcc %r5,%r0,%r0		!veo los flags del numero que empieza siendo minimo
-	bpos min_es_positivo		!me muevo dependiendo del caso en que este
-	bneg min_es_negativo
-	be min_es_negativo
+	ba minimo			
 
 !-------
 
-min_es_negativo:
+minimo:
 	ld %r1+%r3,%r4			!leo del vector
-	subcc %r5,%r4,%r0		!veo cual es menor
-	bpos leido_es_menor		!actualizo el minimo si es menor
-vuelvo2:
+	subcc %r5,%r4,%r0		!veo el signo, si es negativo, es mmayor, si es positivo es menor
+	bpos es_menor
+vuelta2:
 	subcc %r3,4,%r3			!me muevo en el vector
 	be termine_vector
-	ba min_es_negativo
+	ba minimo
 
-leido_es_menor:
+
+es_menor:
 	add %r4,%r0,%r5			!remplazo al minimo
-	ba vuelvo2
+	ba vuelta2
 
-!-------
-
-min_es_positivo:
-	ld %r1+%r3,%r4			!leo el numero del vector
-	addcc %r4,%r0,%r0		!veo los flags del numero leido
-	bneg leido_es_menor
-	bpos lei_pos
-	bneg leido_es_menor
-vuelvo_pos:
-	subcc %r3,4,%r3			!me muevo en el vector
-	be termine_vector
-	ba min_es_positivo
-
-
-lei_pos:
-	subcc %r4,%r5,%r0		!veo cual es menor (Ej MIN es 2)
-	bpos leido_pos_menor		!Si leo 1 hace 1-2=-1 -> 1 es guardado
-	ba vuelvo_pos			!Si leo 3 hace 3-2=1 -> queda 2 como maximo
-
-leido_pos_menor:
-	add %r4,%r0,%r5			!guardo el nuevo minimo
-	ba vuelvo_pos
 !-------
 
 
