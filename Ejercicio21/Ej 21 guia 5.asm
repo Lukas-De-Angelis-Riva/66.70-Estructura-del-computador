@@ -1,12 +1,12 @@
 !Ejercicio 21 - Guia 5 - Estructura del Computador
 !Un programa declara un array de 30 elementos de 32 bits y le pasa a una subrutina su largo y
-!localizaci髇 en memoria. Esta subrutina determina si la suma de todos los elementos del array es!
-!un n鷐ero par (devuelve un 1) o impar (devuelve un 0). En caso de que la suma excediese el
-!rango de representaci髇 del sistema la rutina devuelve -1.
+!localizaci贸n en memoria. Esta subrutina determina si la suma de todos los elementos del array es!
+!un n煤mero par (devuelve un 1) o impar (devuelve un 0). En caso de que la suma excediese el
+!rango de representaci贸n del sistema la rutina devuelve -1.
 !El programa debe inicializar a FFFFh todos los elementos del array en caso de determinar que su
-!suma sea par o bien poner todos en cero si su suma excede el rango de representaci髇.
-!Proponer un c骴igo para el programa principal y para la subrutina considerando las variantes de
-!que ambos est醤 declarados en el mismo m骴ulo o en m骴ulos diferentes.
+!suma sea par o bien poner todos en cero si su suma excede el rango de representaci贸n.
+!Proponer un c贸digo para el programa principal y para la subrutina considerando las variantes de
+!que ambos est谩n declarados en el mismo m贸dulo o en m贸dulos diferentes.
 
 
 
@@ -34,7 +34,7 @@ datermina_suma_par_o_impar:
 	pop %r1			!cargo el largo del vector (120 bytes segun el ej)
 	pop %r2			!cargo la posicion en memoria del vector
 	add %r1,%r0,%r3		!copio el largo del vector
-
+	
 	add %r0,%r0,%r5		!inicializo en 0 el total
 	
 	ba sumar_elementos
@@ -58,7 +58,7 @@ termine_vector:
 	add %r0,1,%r5		!pongo en %r5 el valor pedido a devolver (1)
 	push %r5		!lo devuelvo por la pila
 	sethi 3Fh,%r5		!inicializo %r5 con el valor que va a ir en el vector
-	add %r0,3FFh,%r5		
+	add %r5,3FFh,%r5		
 es_par:
 	st %r5,%r2+%r1		!guardo FFFFh en un lugar del vector		
 	subcc %r1,4,%r1		!reduzco el indice del vector
