@@ -1,12 +1,13 @@
 !Ejercicio 22 - Guia 5
-!Un dispositivo mide simult·neamente 8 valores de temperatura y los almacena en ocho registros
+!Un dispositivo mide simult√°neamente 8 valores de temperatura y los almacena en ocho registros
 !de 32 bits c/u los cuales se encuentran accesibles en el mapa de memoria de una computadora
-!ARC mapeados a partir de la direcciÛn B0101004(2)h. Escribir una rutina que lea estos ocho valores
+!ARC mapeados a partir de la direcci√≥n B0101004(2)h. Escribir una rutina que lea estos ocho valores
 !y devuelva por stack el mayor de ellos.
 
 
 .begin
 .org 2048
+!.extern valorMaximo
 .macro push registro
 	add %r14, -4, %r14
 	st registro, %r14
