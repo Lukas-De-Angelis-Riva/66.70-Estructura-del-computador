@@ -4,7 +4,7 @@
 
 
 ## Resolución:
-![Resolucion](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Ejercicio25/ResolucionEj25.PNG)
+![Resolucion](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Ejercicio25/ResolucionEj25.png)
 
 Por lo tanto, si el máximo valor positivo a guardar en disp22 es 2097151, entonces, el máximo desplazamiento positivo será de 8388604 bytes [2097151 * 4].
 
