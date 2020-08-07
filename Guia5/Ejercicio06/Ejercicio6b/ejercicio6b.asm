@@ -1,5 +1,5 @@
-!Ejercicio 6A
-!Sumar dos numeros pasandolos por registros
+!Ejercicio 6B
+!Sumar dos numeros pasandolos por pila
 
 .begin
 .org 2048
