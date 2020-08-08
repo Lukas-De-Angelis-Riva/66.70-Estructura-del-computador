@@ -1,10 +1,10 @@
 # Ejercicio 25
 
-![Enunciado](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Ejercicio25/Enunciado.JPG)
+![Enunciado](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Guia5/Ejercicio25/Enunciado.JPG)
 
 
 ## Resolución:
-![Resolucion](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Ejercicio25/ResolucionEj25.png)
+![Resolucion](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Guia5/Ejercicio25/ResolucionEj25.png)
 
 
 

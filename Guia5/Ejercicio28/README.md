@@ -1,10 +1,10 @@
 # Ejercicio 28
 
-![Enunciado](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Ejercicio28/Enunciado.JPG)
+![Enunciado](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Guia5/Ejercicio28/Enunciado.JPG)
 
 
 ## Resolución:
-![Resolucion](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Ejercicio28/Resolucion.JPG)
+![Resolucion](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Guia5/Ejercicio28/Resolucion.JPG)
 
 El código tiene dos problemas:
 

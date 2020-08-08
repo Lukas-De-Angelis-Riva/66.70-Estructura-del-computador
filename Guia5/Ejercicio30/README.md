@@ -1,6 +1,6 @@
 # Ejercicio 30
 
-![Enunciado](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Ejercicio30/Enunciado.JPG)
+![Enunciado](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Guia5/Ejercicio30/Enunciado.JPG)
 
 |Dirección | Contenido | Binario | Interpretación Binaria | Interpretación |
 |---|---|---|---|---|
@@ -12,4 +12,4 @@
 |00000824 | 10BFFFFB | 0001 0000 1011 1111 1111 1111 1111 1011 | 00 0 1000 010 1111111111111111111011 | BCH ba 3FFFFB * 4|
 
 ## Resolución:
-![Resolucion](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Ejercicio30/ResolucionEj30.JPG)
+![Resolucion](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Guia5/Ejercicio30/ResolucionEj30.JPG)
