@@ -3,8 +3,15 @@
 ![Enunciado](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Guia6/Ejercicio01/Enunciado.JPG)
 
 ## Tabla de símbolos:
-
-![Tabla](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Guia6/Ejercicio01/tabla.png)
+| Símbolo| Valor |
+| --- | --- |
+| main | 2048 |
+| MiFun | [externa] |
+| cte22 | 2621440 |
+| cte10 | 16 |
+| set | 2060 |
+| fin | 2084 |
+| Disp | 10485764 |
 
 Aquellas líneas de código que no tendrán representación en RAM serán las directivas de ensamblador:
 
