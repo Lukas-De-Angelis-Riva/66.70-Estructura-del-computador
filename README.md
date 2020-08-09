@@ -1,5 +1,5 @@
 # Estructura-Assembly
-Guía de ejercicios 66.70 Estructura del Computador. Facultad de Ingeniería, Universidad de Buenos Aires
+Guía de ejercicios [66.70 Estructura del Computador](http://materias.fi.uba.ar/6670/). Facultad de Ingeniería, Universidad de Buenos Aires
 
 [Guía 5](http://materias.fi.uba.ar/6670/TP5%20-%20ISA.pdf) Colección de programas escritos en Assembly. Diferentes soluciones independientes a los ejercicios.
 
