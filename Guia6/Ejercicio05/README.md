@@ -53,10 +53,24 @@ Por lo que, el nuevo archivo será el siguiente:
 
 
 ## Cambios por linker Loader
-
+Relocaliza y carga el programa en memoria. Si el sistema operativo asigna el segmento de memoria estática a partir de la dirección 0E28h relocalizará las direcciones relativas.
 
 ## Representación cuantitativa en assembly // Código objeto (Lo que realmente pasa)
 ```assembly
-
-
+	.begin
+		.org 0E28h
+	u	.equ 1
+0E28h subrut:	orncc %r3, %r0, %r3		86b0c000
+0E2Ch		addcc %r3, u, %r3		8680e001
+0E30h		jmpl %r15, 4, %r0		81c3e004
+		.end
+		.begin
+		.org 2060
+0E34h main:	ld [x], %r2			c4002e44
+0E38h		ld [y], %r3			c6002e48
+0E3Ch		call subrut			7ffffffb
+0E40h		jmpl %r15, 4, %r0		81c3e004
+0E44h		x:	2			00000002
+0E48h		y:	10			0000000a
+	.end
 ```
