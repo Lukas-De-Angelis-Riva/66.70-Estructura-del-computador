@@ -33,7 +33,7 @@ Por lo que, el nuevo archivo será el siguiente:
 
 ## Representación cuantitativa en assembly // Código objeto (Lo que realmente se resuelve)
 ```assembly
-		.begin									
+	.begin									
 		.org 2048								
 	u	.equ 1									
 2048 subrut:	orncc %r3, %r0, %r3		86b0c000
