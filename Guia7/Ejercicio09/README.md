@@ -10,10 +10,10 @@ Por lo que:
 
 1. Suponiendo que la señal de reconocimiento indica que se completo la operación con un 1:
 
-	El CSAI no verá nunca unas señal de reconocimiento y por tanto no incrementará las direcciones provocando que la computadora quede congelada.
+	El CSAI no verá nunca una señal de reconocimiento y por tanto no incrementará las direcciones provocando que la computadora quede congelada.
 
 2. Suponiendo que la señal de reconocimiento indica que se completo la operación con un 0:
 	
 	El CSAI verá constantemente la señal de reconocimiento por lo que avanzará sin esperar a los retardos de la memoria RAM. Esto además de trivialmente dejar en desuso a la memoria RAM pues sus datos nunca llegarán en el momento indicado podría provocar sobreescrituras inesperadas sobre esta misma.
 
-En ambos casos no sería una buena idea.
+En ambos casos no sería una buena idea D:
