@@ -33,9 +33,13 @@ A continuación en detalle la microinstrucción:
 Quien recibe como entrada la salida del componente CBL (Control branch logic)
 
 `
+	
 	00: Next.
+	
 	01: Jump.
+	
 	10: Instruction decode.
+	
 `
 
 En caso de que el CSAMux reciba 00 irá a la microinstrucción siguiente, es decir, 4 palabras de 41bits más adelante (Que lee desde el CSAI).
@@ -45,9 +49,9 @@ En caso de que el CSAMux reciba 01 hará la lógica para saltar a la instrucció
 En caso de que el CSAMux reciba 10 tendrá que decodificar sobre los diferentes ops escritos en el registro %ir de manera tal que genere una palabra de 11bits, conformados de la siguiente manera
 
 ```
- |op| op3|
-1|--------00
-    |op2|
+     |     op3   |   
+1 _ _ _ _ _ _ _ _ 0 0
+ |op | op2 |
 ```
 
 De manera que se genere, para cada posible combinación de ops un código univoco que direcciona una dirección de memoria de 4 palabras de 41 bits referidas al Control Store.
