@@ -100,6 +100,8 @@ int main (){
 ```
 Y en tiempo de ejecución tardará lo mismo que el Algoritmo A y el Algoritmo B.
 
+
+## Resultado
 Por lo que, ordenados según tiempo de ejecución:
 
 |Ranking| Algoritmo|
