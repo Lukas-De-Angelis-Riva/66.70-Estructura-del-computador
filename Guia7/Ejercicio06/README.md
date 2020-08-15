@@ -32,15 +32,13 @@ A continuación en detalle la microinstrucción:
 2. Se decodifica el código de la operación asociada a la instrucción escrita en %ir. De esto se encarga el CS Adress MUX.
 Quien recibe como entrada la salida del componente CBL (Control branch logic)
 
-`
-	
+```
 	00: Next.
 	
 	01: Jump.
 	
 	10: Instruction decode.
-	
-`
+```
 
 En caso de que el CSAMux reciba 00 irá a la microinstrucción siguiente, es decir, 4 palabras de 41bits más adelante (Que lee desde el CSAI).
 
