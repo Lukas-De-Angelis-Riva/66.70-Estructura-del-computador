@@ -5,6 +5,6 @@ Guía de ejercicios [66.70 Estructura del Computador](http://materias.fi.uba.ar/
 
 [Guía 6](http://materias.fi.uba.ar/6670/TP6%20-%20Compiladores%203.0.pdf) Conceptos de proceso de compilación y ensamblado.
 
-[Guía 7](http://materias.fi.uba.ar/6670/TP7%20-%20Microarquitectura.pdf) Microarquitectura [Próximamente]
+[Guía 7](http://materias.fi.uba.ar/6670/TP7%20-%20Microarquitectura.pdf) Microarquitectura.
 
 [Guía 8](http://materias.fi.uba.ar/6670/TP8%20-%20Memoria.pdf) Memoria [Próximamente]
