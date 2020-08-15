@@ -18,11 +18,13 @@ Se puede ver en la siguiente tabla:
 
 -	Multiplexor de direcciones de la memoria de control:
 		
-		La entrada indicará un `10` pues deberá activar la instruction decode.
-		La salida indicará un `11001000000`.
+		La entrada indicará un 10 pues deberá activar la instruction decode.
+		La salida indicará un 11001000000
 
 -	Incrementador de direcciones de la memoria de control:
-		Tanto la entrada como la salida indicarán un `11001000001` pues es la dirección siguiente a la salida del CSAMux
+
+		Tanto la entrada como la salida indicarán un 11001000001 pues es la dirección siguiente a la salida del CSAMux
+
 -	Multiplexor bus A:
 
 		La entrada:
