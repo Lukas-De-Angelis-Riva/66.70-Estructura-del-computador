@@ -20,7 +20,7 @@ Luego se fija en el valor Z para saltar, por lo que, el registro de microinstruc
 
 |   |A|AMUX|B|BMUX|C|CMUX     |RD|WR|ALU|COND| JUMP ADDR|
 |---|------|-|------|-|------|-|-|-|----|---|-----------|
-|60:|100001|0|000000|0|100001|0|0|0|0111|010|00001000000|
+|60:|000000|0|100001|0|100001|0|0|0|0111|010|00001000000|
 |61:|000000|1|000000|0|000000|1|0|0|1011|000|00000000000|
 
 Remarcar que en la segunda línea elijo tomar en B el registro desde el MIR por cuestiones de control ya que fuerzo un 0.
