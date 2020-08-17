@@ -30,7 +30,7 @@ RD:		0
 WR:		0
 ALU:	1100		          ! SEXT13(A);
 COND:	101			  ! if IR[13]
-JUMP:	00000000010	! Saltar 2 hacia adelante
+JUMP:	00000000010	          ! Saltar 2 hacia adelante
 
 10010100000000100001000110010100000000010
 
