@@ -29,7 +29,7 @@ Nuevamente lo representaremos de la siguiente manera:
 
 Repitiendo el mismo procedimiento pero con el equivalente recién planteado se obtiene lo siguiente:
 
-![Paralelo2](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Guia8/Ejercicio01/Paralelo2.png)
+![Paralelo2](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Guia8/Ejercicio01/MemoriasParalelo2.png)
 
 Planteando el equivalente:
 
