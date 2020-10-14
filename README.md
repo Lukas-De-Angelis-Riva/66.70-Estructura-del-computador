@@ -8,9 +8,10 @@ Guía de ejercicios [66.70 Estructura del Computador](http://materias.fi.uba.ar/
   - [Diseñador de circuitos lógicos online](https://logic.ly/demo/). Para esta guía está copado.
 
 [Guía 3](http://materias.fi.uba.ar/6670/TP3%20-%20FlipFlops.pdf) Flip-Flops. [Incompleta]
-
-[Guía 4](http://materias.fi.uba.ar/6670/TP4%20-%20Registros_Contadores.pdf) Registros y contadores. [Incompleta]
   - [Apunte sobre Sistemas Combinacionales y Sistemas Secuenciales](https://users.dcc.uchile.cl/~clgutier/Capitulo_4.pdf)
+  
+[Guía 4](http://materias.fi.uba.ar/6670/TP4%20-%20Registros_Contadores.pdf) Registros y contadores. [Incompleta]
+
   - [Apunte sobre Componentes digitales](https://users.dcc.uchile.cl/~clgutier/Capitulo_5.pdf)
   
 [Guía 5](http://materias.fi.uba.ar/6670/TP5%20-%20ISA.pdf) Colección de programas escritos en Assembly. Diferentes soluciones independientes a los ejercicios.
