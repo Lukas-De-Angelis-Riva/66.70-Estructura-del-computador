@@ -32,6 +32,7 @@ Guía de ejercicios [66.70 Estructura del Computador](http://materias.fi.uba.ar/
   - Si tenés la resolución sin errores podés linkear la Issue a la Pull request :D
 
 ### Finales:
-- Si resolviste algún final y tenés ganas de colgarlo, seguí la misma lógica que
-
-## Espero les sirva mucho
+  - Si resolviste algún final y tenés ganas de colgarlo, seguí la misma lógica que un ejercicio normal.
+  - A día de hoy no hay ningún final. Si querés ser el pionero te agradezco muchísimo!
+  
+## ¡Muchos éxitos si estás cursando la materia, sacá todo el provecho que requieras de este repositorio!
