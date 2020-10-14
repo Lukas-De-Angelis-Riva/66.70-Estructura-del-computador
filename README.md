@@ -1,10 +1,12 @@
 # Estructura-Assembly
 Guía de ejercicios [66.70 Estructura del Computador](http://materias.fi.uba.ar/6670/). Facultad de Ingeniería, Universidad de Buenos Aires
 
-[Guía 1](http://materias.fi.uba.ar/6670/TP1%20-%20Sist%20Numericos.pdf) Sistemas de numeración. [Incompleta] 
+[Guía 1](http://materias.fi.uba.ar/6670/TP1%20-%20Sist%20Numericos.pdf) Sistemas de numeración. [Incompleta]
 
 [Guía 2](http://materias.fi.uba.ar/6670/TP2%20-%20Algebra%20de%20Boole.pdf) Álgebra de Boole y diseño de circuitos lógicos. [Incompleta]
-
+  - [Solucionador de mapas de Karnaugh online](https://www.charlie-coleman.com/experiments/kmap/), muy bueno y muy útil.
+  - [Diseñador de circuitos lógicos online](https://logic.ly/demo/). Para esta guía está copado.
+  
 [Guía 3](http://materias.fi.uba.ar/6670/TP3%20-%20FlipFlops.pdf) Flip-Flops. [Incompleta]
 
 [Guía 4](http://materias.fi.uba.ar/6670/TP4%20-%20Registros_Contadores.pdf) Registros y contadores. [Incompleta]
@@ -12,11 +14,13 @@ Guía de ejercicios [66.70 Estructura del Computador](http://materias.fi.uba.ar/
 [Guía 5](http://materias.fi.uba.ar/6670/TP5%20-%20ISA.pdf) Colección de programas escritos en Assembly. Diferentes soluciones independientes a los ejercicios.
 
 [Guía 6](http://materias.fi.uba.ar/6670/TP6%20-%20Compiladores%203.0.pdf) Conceptos de proceso de compilación y ensamblado.
+  - Es **clave** para este tema leer el capítulo 5 del libro Principios De Arquitectura De Computadoras de Murdocca.
 
 [Guía 7](http://materias.fi.uba.ar/6670/TP7%20-%20Microarquitectura.pdf) Microarquitectura. [A medias]
-
+  - [Interesante libro interactivo](https://fdelmazo.github.io/figure-610/) realizado por [FdelMazo](https://github.com/FdelMazo).
+  - Es **clave** para este tema leer el capítulo 6 del libro Principios De Arquitectura De Computadoras de Murdocca.
+  
 [Guía 8](http://materias.fi.uba.ar/6670/TP8%20-%20Memoria.pdf) Memoria. [Incompleta]
-
 
 ## Abierto a colaboración. 
 
