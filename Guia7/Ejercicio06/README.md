@@ -40,7 +40,7 @@ Quien recibe como entrada la salida del componente CBL (Control branch logic)
 	10: Instruction decode.
 ```
 
-En caso de que el CSAMux reciba 00 irá a la microinstrucción siguiente, es decir, 4 palabras de 41bits más adelante (Que lee desde el CSAI).
+En caso de que el CSAMux reciba 00 irá a la siguiente microinstrucción, es decir, la siguiente palabra de 41 bits (cuya dirección lee del CSAI).
 
 En caso de que el CSAMux reciba 01 hará la lógica para saltar a la instrucción deseada (Que lee desde la entrada 'Jump').
 
