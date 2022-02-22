@@ -16,6 +16,10 @@ Se puede ver en la siguiente tabla:
 |---|-----|------|-----|-|------|
 |10 |00001|010000|01010|1|0000000110000|
 
+A continuación se indican con colores que significa cada parte
+
+![Explicacion](https://github.com/Lukas-De-Angelis-Riva/Estructura-Assembly/blob/master/Guia7/Ejercicio07/explicacion.jpg)
+
 -	Multiplexor de direcciones de la memoria de control:
 		
 		La entrada indicará un 10 pues deberá activar la instruction decode.
